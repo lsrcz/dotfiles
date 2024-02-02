@@ -40,7 +40,7 @@
       };
 
       darwinConfigurations = {
-        hela = mkSystem "hela" {
+        hera = mkSystem "hera" {
           system = "aarch64-darwin";
           username = "siruilu";
           isDarwin = true;
