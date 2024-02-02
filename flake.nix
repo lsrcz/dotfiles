@@ -38,5 +38,13 @@
           username = "siruilu";
         };
       };
+
+      darwinConfigurations = {
+        hela = mkSystem "hela" {
+          system = "aarch64-darwin";
+          username = "siruilu";
+          isDarwin = true;
+        };
+      };
     };
 }

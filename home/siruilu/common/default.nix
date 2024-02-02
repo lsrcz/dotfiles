@@ -17,4 +17,13 @@
   programs.ssh.enable = true;
   programs.tmux.enable = true;
   siruilu.shell.zsh.useDefault = true;
+
+  programs.git = {
+    enable = true;
+    userEmail = "siruilu@cs.washington.edu";
+    userName = "Sirui Lu";
+    delta.enable = true;
+    signing.signByDefault = true;
+    signing.key = null;
+  };
 }

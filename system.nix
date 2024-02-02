@@ -11,13 +11,10 @@ let
   os = if isDarwin then "darwin" else "nixos";
   hostConfig = ./hosts/${hostname};
   userHomeManagerConfig = ./home/${username}/${hostname};
-  buildSystem = if isDarwin then inputs.darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
+  buildSystem = if isDarwin then inputs.nix-darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
   home-manager = if isDarwin then inputs.home-manager.darwinModules else inputs.home-manager.nixosModules;
   siruilu = import ./lib { inherit (nixpkgs) lib; };
-in
-buildSystem rec {
-  inherit system;
-  modules = [
+  commonModules = [
     ({ pkgs, ... }:
       {
         nixpkgs.overlays = [
@@ -44,4 +41,26 @@ buildSystem rec {
       };
     }
   ];
+  nixosOnlyModules = [ ];
+  darwinModules = [
+    inputs.nix-homebrew.darwinModules.nix-homebrew
+    {
+      nix-homebrew = {
+        enable = true;
+        enableRosetta = true;
+        user = "siruilu";
+        taps = {
+          "homebrew/homebrew-core" = inputs.homebrew-core;
+          "homebrew/homebrew-cask" = inputs.homebrew-cask;
+          "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
+        };
+        mutableTaps = false;
+      };
+    }
+  ];
+in
+buildSystem rec {
+  inherit system;
+  modules = commonModules ++
+    (if isDarwin then darwinModules else nixosOnlyModules);
 }
