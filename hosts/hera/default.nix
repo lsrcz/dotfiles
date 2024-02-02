@@ -1,4 +1,7 @@
 { pkgs, ... }: {
+  imports = [
+    ../darwin
+  ];
   environment.systemPackages =
     with pkgs; [
       vim
