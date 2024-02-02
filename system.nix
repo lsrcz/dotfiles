@@ -10,8 +10,7 @@ hostname:
 let
   os = if isDarwin then "darwin" else "nixos";
   hostConfig = ./hosts/${hostname};
-  sharedOSConfig = ./hosts/${os};
-  userHomeManagerConfig = ./home/${username}/${os};
+  userHomeManagerConfig = ./home/${username}/${hostname};
   buildSystem = if isDarwin then inputs.darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
   home-manager = if isDarwin then inputs.home-manager.darwinModules else inputs.home-manager.nixosModules;
   siruilu = import ./lib { inherit (nixpkgs) lib; };
@@ -26,7 +25,6 @@ buildSystem rec {
         ];
       })
     hostConfig
-    sharedOSConfig
     home-manager.home-manager
     {
       home-manager.useGlobalPkgs = true;

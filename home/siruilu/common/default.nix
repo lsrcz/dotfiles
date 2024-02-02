@@ -16,14 +16,5 @@
   programs.home-manager.enable = true;
   programs.ssh.enable = true;
   programs.tmux.enable = true;
-  programs.ssh.matchBlocks = {
-    tricycle = {
-      identityFile = "/home/siruilu/.ssh/id_ed25519_keyless";
-      port = 22;
-      hostname = "tricycle.cs.washington.edu";
-      user = "siruilu";
-    };
-  };
-
   siruilu.shell.zsh.useDefault = true;
 }
