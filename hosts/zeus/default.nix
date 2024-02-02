@@ -91,7 +91,7 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL4s0E0IMdYIIphhv9K/tB67aLLKMVAyge/5ZpyR9qXN zeus"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMUUSlXy5VmEZw80NFH8AxiU2H0rfCWqImI+vrxzEd/r"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAoHpRgSTp2ANmSeY7vAGikhotyQDb1lcKzYknuo373Z"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqDHWA5lV/kbnUA40SiY9FjuqJl8kUKe3DfAy8FJlyQ hela"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqDHWA5lV/kbnUA40SiY9FjuqJl8kUKe3DfAy8FJlyQ hera"
     ];
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
