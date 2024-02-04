@@ -5,9 +5,6 @@
   environment.systemPackages =
     with pkgs; [
       vim
-      iterm2
-      vscode
-      slack
       gnupg
     ];
 
@@ -40,13 +37,29 @@
   homebrew = {
     enable = true;
     casks = [
-      "google-chrome"
-      "displaylink"
-      "readdle-spark"
-      "wechat"
-      "todesk"
-      "rectangle"
+      "1password"
       "cheatsheet"
+      "dash"
+      "displaylink"
+      "google-chrome"
+      "iina"
+      "iterm2"
+      "raycast"
+      "readdle-spark"
+      "rectangle"
+      "slack"
+      "todesk"
+      "visual-studio-code"
+      "wechat"
     ];
+    masApps = {
+      "1Password for Safari" = 1569813296;
+      "GarageBand" = 682658836;
+      "iMovie" = 408981434;
+      "Keynote" = 409183694;
+      "Numbers" = 409203825;
+      "Pages" = 409201541;
+    };
+    onActivation.cleanup = "uninstall";
   };
 }

@@ -10,9 +10,6 @@
       }
     )
   ];
-  home.packages = with pkgs; [
-    iina
-    raycast
-  ];
+  home.packages = with pkgs; [];
   home.homeDirectory = "/Users/siruilu";
 }
