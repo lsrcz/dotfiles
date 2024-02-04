@@ -46,6 +46,7 @@
       "wechat"
       "todesk"
       "rectangle"
+      "cheatsheet"
     ];
   };
 }
