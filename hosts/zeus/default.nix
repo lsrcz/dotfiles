@@ -218,15 +218,17 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   boot.blacklistedKernelModules = [ "nouveau" ];
 
-  # services.samba-wsdd = {
-  #   enable = true;
-  #   openFirewall = true;
-  # };
+  services.samba-wsdd = {
+    enable = true;
+    openFirewall = true;
+  };
   services.samba = {
     enable = true;
     extraConfig = ''
       bind interfaces only = yes
-      interfaces = virbr0
+      interfaces = virbr0 eno2
+      min protocol = SMB2
+      use sendfile = yes
     '';
     shares = {
       backup = {
@@ -236,10 +238,29 @@
         writeable = "yes";
         "force user" = "siruilu";
       };
+      time = {
+        path = "/mnt/hdd/Time Machine";
+        "valid users" = "siruilu";
+        public = "no";
+        writeable = "yes";
+        "force user" = "siruilu";
+        "vfs objects" = "acl_xattr catia fruit streams_xattr";
+        "fruit:advertise_fullsync" = "true";
+        "fruit:metadata" = "stream";
+        "fruit:aapl" = "yes";
+        "fruit:time machine" = "yes";
+        "aio read size" = "1";
+        "aio write size" = "1";
+        "spotlight" = "yes";
+      };
     };
   };
 
   networking.firewall.interfaces."virbr0" = {
+    allowedTCPPorts = [ 139 445 ];
+    allowedUDPPorts = [ 137 138 ];
+  };
+  networking.firewall.interfaces."eno2" = {
     allowedTCPPorts = [ 139 445 ];
     allowedUDPPorts = [ 137 138 ];
   };
