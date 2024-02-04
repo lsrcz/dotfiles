@@ -44,6 +44,7 @@
       "google-chrome"
       "iina"
       "iterm2"
+      "itsycal"
       "raycast"
       "readdle-spark"
       "rectangle"
