@@ -43,6 +43,7 @@
       "displaylink"
       "google-chrome"
       "iina"
+      "istat-menus"
       "iterm2"
       "itsycal"
       "raycast"
