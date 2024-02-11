@@ -37,6 +37,7 @@
   homebrew = {
     enable = true;
     casks = [
+      "arq"
       "1password"
       "cheatsheet"
       "dash"
