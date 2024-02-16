@@ -47,6 +47,7 @@
       "istat-menus"
       "iterm2"
       "itsycal"
+      "notion"
       "raycast"
       "readdle-spark"
       "rectangle"
