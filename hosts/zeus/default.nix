@@ -229,8 +229,6 @@
   services.samba = {
     enable = true;
     extraConfig = ''
-      bind interfaces only = yes
-      interfaces = virbr0 eno2
       min protocol = SMB2
       use sendfile = yes
       log level = 1 auth:5 winbind:5 auth_audit:3 auth_json_audit:3
