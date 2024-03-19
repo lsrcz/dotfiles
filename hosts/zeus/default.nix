@@ -111,7 +111,6 @@
     cifs-utils
     gnupg
     smartmontools
-    rnix-lsp
     direnv
     cachix
     pciutils
