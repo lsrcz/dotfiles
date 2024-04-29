@@ -155,7 +155,7 @@
     persist = true;
     localUser = "siruilu";
     localPort = 1898;
-    remoteHostname = "tricycle";
+    remoteHostname = "bicycle";
     remotePort = 22;
     remoteUser = "siruilu";
     bindPort = 8094;

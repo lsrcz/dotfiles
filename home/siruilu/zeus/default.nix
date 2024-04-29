@@ -16,5 +16,11 @@
       hostname = "tricycle.cs.washington.edu";
       user = "siruilu";
     };
+    bicycle = {
+      identityFile = "/home/siruilu/.ssh/id_ed25519_keyless";
+      port = 22;
+      hostname = "bicycle.cs.washington.edu";
+      user = "siruilu";
+    };
   };
 }

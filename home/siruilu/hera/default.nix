@@ -14,7 +14,7 @@
     nixos = {
       identityFile = "/Users/siruilu/.ssh/id_ed25519";
       port = 28093;
-      hostname = "tricycle.cs.washington.edu";
+      hostname = "bicycle.cs.washington.edu";
       user = "siruilu";
     };
   };
