@@ -215,6 +215,7 @@
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.beta;
+    nvidiaPersistenced = true;
   };
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;

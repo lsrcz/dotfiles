@@ -15,14 +15,28 @@ in
     mkIf
       cfg.useDefault
       {
-        virtualisation.docker = {
-          enable = true;
-          rootless = {
+        virtualisation = {
+          containers = {
             enable = true;
-            setSocketVariable = true;
           };
-          enableNvidia = cfg.enableNvidia;
+          docker = {
+            enable = true;
+            rootless = {
+              enable = true;
+              setSocketVariable = true;
+              daemon.settings = mkIf cfg.enableNvidia {
+                runtimes = {
+                  nvidia = {
+                    path = "${pkgs.nvidia-docker}/bin/nvidia-container-runtime";
+                  };
+                };
+              };
+            };
+            enableNvidia = cfg.enableNvidia;
+          };
+          oci-containers.backend = "docker";
         };
+        hardware.nvidia-container-toolkit.enable = cfg.enableNvidia;
         hardware.opengl.driSupport32Bit =
           mkIf (pkgs.stdenv.isx86_64 && cfg.enableNvidia) true;
       };
