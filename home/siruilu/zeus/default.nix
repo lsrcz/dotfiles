@@ -22,5 +22,11 @@
       hostname = "bicycle.cs.washington.edu";
       user = "siruilu";
     };
+    linode = {
+      identityFile = "/home/siruilu/.ssh/id_ed25519_keyless";
+      port = 22;
+      hostname = "172.234.236.43";
+      user = "siruilu";
+    };
   };
 }

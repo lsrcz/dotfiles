@@ -14,7 +14,13 @@
     nixos = {
       identityFile = "/Users/siruilu/.ssh/id_ed25519";
       port = 28093;
-      hostname = "bicycle.cs.washington.edu";
+      hostname = "172.234.236.43";
+      user = "siruilu";
+    };
+    linode = {
+      identityFile = "/Users/siruilu/.ssh/id_ed25519";
+      port = 22;
+      hostname = "172.234.236.43";
       user = "siruilu";
     };
   };
