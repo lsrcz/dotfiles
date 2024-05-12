@@ -159,6 +159,7 @@
     remotePort = 22;
     remoteUser = "siruilu";
     bindPort = 8094;
+    autosshMonitoringPort = 20000;
   };
 
   # Open ports in the firewall.

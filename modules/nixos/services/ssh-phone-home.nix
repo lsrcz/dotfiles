@@ -5,7 +5,7 @@
 with lib;
 
 let
-  inherit (pkgs) openssh;
+  inherit (pkgs) autossh;
   cfg = config.services.ssh-phone-home;
 in
 
@@ -75,6 +75,13 @@ in
           The port to bind and listen to on the remote host.
         '';
       };
+      
+      autosshMonitoringPort = mkOption {
+        default = 20000;
+        description = ''
+          The port for autossh to monitor on.
+        '';
+      };
     };
   };
 
@@ -91,6 +98,9 @@ in
         # FIXME: This isn't triggered until a reboot, and probably won't work between suspends.
         wantedBy = [ "multi-user.target" ];
 
+        after = [ "network-online.target" ];
+        requires = [ "network-online.target" ];
+
         serviceConfig = with cfg; {
           User = cfg.localUser;
         } // (if cfg.persist then
@@ -103,7 +113,7 @@ in
         );
 
         script = with cfg;  ''
-          ${openssh}/bin/ssh -NTC -o ServerAliveInterval=30 -o ExitOnForwardFailure=yes -R ${toString bindPort}:localhost:${toString localPort} -l ${remoteUser} -p ${toString remotePort} ${remoteHostname}
+          ${autossh}/bin/autossh -M ${toString autosshMonitoringPort} -NTC -R ${toString bindPort}:localhost:${toString localPort} -l ${remoteUser} -p ${toString remotePort} ${remoteHostname}
         '';
       };
   };
