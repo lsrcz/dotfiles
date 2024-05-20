@@ -23,6 +23,12 @@
       hostname = "172.234.236.43";
       user = "siruilu";
     };
+    ptc = {
+      identityFile = "/Users/siruilu/.ssh/id_ed25519";
+      port = 22;
+      hostname = "ptc.cs.washington.edu";
+      user = "siruilu";
+    };
   };
   programs.ssh.extraConfig = ''
     Host *
