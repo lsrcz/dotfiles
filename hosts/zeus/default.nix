@@ -279,14 +279,14 @@
     meslo-lgs-nf
   ];
 
-  # services.code-server = {
-  #   enable = true;
-  # auth = "none";
-  #  port = 20808;
-  #  host = "127.0.0.1";
-  #  user = "siruilu";
-  #  disableTelemetry = true;
-  # };
+  services.code-server = {
+    enable = true;
+    auth = "none";
+    port = 20808;
+    host = "127.0.0.1";
+    user = "siruilu";
+    disableTelemetry = true;
+  };
 
   siruilu.virtualisation.nvidia-passthrough = {
     enable = true;
