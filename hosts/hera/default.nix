@@ -42,6 +42,7 @@
       "cheatsheet"
       "dash"
       "displaylink"
+      "garmin-express"
       "google-chrome"
       "iina"
       "istat-menus"
