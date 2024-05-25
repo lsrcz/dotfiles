@@ -29,6 +29,19 @@
       hostname = "ptc.cs.washington.edu";
       user = "siruilu";
     };
+    recycle = {
+      identityFile = "/Users/siruilu/.ssh/id_ed25519";
+      port = 22;
+      hostname = "recycle.cs.washington.edu";
+      user = "siruilu";
+    };
+    ptc-jump = {
+      identityFile = "/Users/siruilu/.ssh/id_ed25519";
+      port = 22;
+      hostname = "ptc.cs.washington.edu";
+      user = "siruilu";
+      proxyJump = "recycle";
+    };
   };
   programs.ssh.extraConfig = ''
     Host *
