@@ -55,6 +55,7 @@
       "slack"
       "todesk"
       "visual-studio-code"
+      "xquartz"
       "wechat"
       "zoom"
     ];
