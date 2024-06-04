@@ -48,6 +48,7 @@
       "istat-menus"
       "iterm2"
       "itsycal"
+      "microsoft-office-businesspro"
       "notion"
       "raycast"
       "readdle-spark"
