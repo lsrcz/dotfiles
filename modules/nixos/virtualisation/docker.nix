@@ -32,7 +32,6 @@ in
                 };
               };
             };
-            enableNvidia = cfg.enableNvidia;
           };
           oci-containers.backend = "docker";
         };
