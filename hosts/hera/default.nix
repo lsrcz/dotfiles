@@ -48,6 +48,7 @@
       "istat-menus"
       "iterm2"
       "itsycal"
+      "microsoft-office-businesspro"
       "notion"
       "raycast"
       "readdle-spark"
@@ -55,6 +56,7 @@
       "slack"
       "todesk"
       "visual-studio-code"
+      "xquartz"
       "wechat"
       "zoom"
     ];
