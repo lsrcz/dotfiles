@@ -18,6 +18,7 @@ in
         virtualisation = {
           containers = {
             enable = true;
+            cdi.dynamic.nvidia.enable = cfg.enableNvidia;
           };
           docker = {
             enable = true;
@@ -32,7 +33,7 @@ in
                 };
               };
             };
-            enableNvidia = cfg.enableNvidia;
+            # enableNvidia = cfg.enableNvidia;
           };
           oci-containers.backend = "docker";
         };
