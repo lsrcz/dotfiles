@@ -46,7 +46,7 @@
       port = 22;
       hostname = "ptc.cs.washington.edu";
       user = "siruilu";
-      proxyJump = "tricycle";
+      proxyJump = "recycle";
     };
     bananapi-local = {
       identityFile = "/Users/siruilu/.ssh/id_ed25519";
