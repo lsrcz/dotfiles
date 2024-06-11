@@ -48,6 +48,7 @@
       "istat-menus"
       "iterm2"
       "itsycal"
+      "keka"
       "microsoft-office-businesspro"
       "notion"
       "raycast"
