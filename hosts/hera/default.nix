@@ -39,6 +39,7 @@
     casks = [
       "arq"
       "1password"
+      "chatgpt"
       "cheatsheet"
       "dash"
       "displaylink"
