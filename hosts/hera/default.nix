@@ -36,7 +36,7 @@
 
   homebrew = {
     enable = true;
-    casks = [
+    casks = map (nm: { name = nm; greedy = true; }) [
       "arq"
       "1password"
       "chatgpt"
