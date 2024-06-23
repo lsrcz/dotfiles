@@ -56,6 +56,7 @@
       "readdle-spark"
       "rectangle"
       "slack"
+      "tencent-meeting"
       "todesk"
       "visual-studio-code"
       "xquartz"
