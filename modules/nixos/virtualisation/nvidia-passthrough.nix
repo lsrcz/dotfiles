@@ -47,6 +47,6 @@ in
     ]
     else
       [ ]);
-    hardware.opengl.enable = true;
+    hardware.graphics.enable = true;
   };
 }

@@ -36,7 +36,7 @@ in
           oci-containers.backend = "docker";
         };
         hardware.nvidia-container-toolkit.enable = cfg.enableNvidia;
-        hardware.opengl.driSupport32Bit =
+        hardware.graphics.enable32Bit =
           mkIf (pkgs.stdenv.isx86_64 && cfg.enableNvidia) true;
       };
 }
