@@ -52,6 +52,7 @@
       "keka"
       "microsoft-office-businesspro"
       "notion"
+      "omnidisksweeper"
       "raycast"
       "readdle-spark"
       "rectangle"
@@ -72,5 +73,7 @@
       "Pages" = 409201541;
     };
     onActivation.cleanup = "uninstall";
+    onActivation.autoUpdate = true;
+    onActivation.upgrade = true;
   };
 }
