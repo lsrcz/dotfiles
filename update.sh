@@ -1,5 +1,6 @@
 #!/bin/sh
 
+nix flake update
 unameOut="$(uname -s)"
 case "${unameOut}" in
     Linux*)     sudo nixos-rebuild switch --flake .#$(hostname);;
