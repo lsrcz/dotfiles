@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     nixpkgs-fmt
     nodePackages.gitmoji-cli
+    htop
     siruilu.stack-upload
     siruilu.stack-upload-doc
   ];

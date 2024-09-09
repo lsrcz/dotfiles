@@ -107,7 +107,6 @@
     wget
     git
     samba
-    htop
     cifs-utils
     gnupg
     smartmontools
