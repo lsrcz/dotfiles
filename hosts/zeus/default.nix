@@ -228,24 +228,27 @@
   };
   services.samba = {
     enable = true;
-    extraConfig = ''
-      min protocol = SMB2
-      use sendfile = yes
-      log level = 1 auth:5 winbind:5 auth_audit:3 auth_json_audit:3
-    '';
-    shares = {
-      backup = {
-        path = "/mnt/hdd";
+    settings = {
+      "global" = {
+        "security" = "user";
+        "passwd program" = "/run/wrappers/bin/passwd %u";
+        "invalid users" = "root";
+        "min protocol" = "SMB2";
+        "use sendfile" = "yes";
+        "log level" = "1 auth:5 winbind:5 auth_audit:3 auth_json_audit:3";
+      };
+      "backup" = {
+        "path" = "/mnt/hdd";
         "valid users" = "siruilu";
-        public = "no";
-        writeable = "yes";
+        "public" = "no";
+        "writeable" = "yes";
         "force user" = "siruilu";
       };
-      time = {
-        path = "/mnt/hdd/Time Machine";
+      "time" = {
+        "path" = "/mnt/hdd/Time Machine";
         "valid users" = "siruilu";
-        public = "no";
-        writeable = "yes";
+        "public" = "no";
+        "writeable" = "yes";
         "force user" = "siruilu";
         "vfs objects" = "acl_xattr catia fruit streams_xattr";
         "fruit:advertise_fullsync" = "true";
