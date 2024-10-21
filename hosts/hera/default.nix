@@ -41,6 +41,7 @@
       "1password"
       "chatgpt"
       "cheatsheet"
+      "cyberduck"
       "dash"
       "displaylink"
       "garmin-express"
