@@ -232,7 +232,7 @@
       "global" = {
         "security" = "user";
         "passwd program" = "/run/wrappers/bin/passwd %u";
-        "invalid users" = "root";
+        "invalid users" = [ "root" ];
         "min protocol" = "SMB2";
         "use sendfile" = "yes";
         "log level" = "1 auth:5 winbind:5 auth_audit:3 auth_json_audit:3";
