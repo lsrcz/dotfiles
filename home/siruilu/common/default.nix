@@ -10,6 +10,7 @@
     nixpkgs-fmt
     nodePackages.gitmoji-cli
     htop
+    hyperfine
     siruilu.stack-upload
     siruilu.stack-upload-doc
   ];
