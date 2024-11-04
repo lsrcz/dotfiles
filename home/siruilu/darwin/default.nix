@@ -1,4 +1,4 @@
-{ isWSL, inputs, ... }:
+{ isWSL, sshKeyPath, inputs, ... }:
 { config, pkgs, ... }:
 {
   imports = [
@@ -6,7 +6,7 @@
       import ../common {
         inherit isWSL;
         inherit inputs;
-
+        inherit sshKeyPath;
       }
     )
   ];
