@@ -34,6 +34,14 @@
   users.users.siruilu.home = "/Users/siruilu";
   networking.hostName = "hera";
 
+  nix.optimise.interval = [
+    {
+      Hour = 6;
+      Minute = 15;
+      Weekday = 7;
+    }
+  ];
+
   homebrew = {
     enable = true;
     casks = map (nm: { name = nm; greedy = true; }) [
@@ -44,6 +52,7 @@
       "cyberduck"
       "dash"
       "displaylink"
+      "docker"
       "garmin-express"
       "google-chrome"
       "iina"
