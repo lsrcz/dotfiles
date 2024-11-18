@@ -296,4 +296,6 @@
   };
 
   boot.binfmt.emulatedSystems = [ "riscv32-linux" "riscv64-linux" ];
+
+  nix.optimise.dates = [ "06:15" ];
 }
